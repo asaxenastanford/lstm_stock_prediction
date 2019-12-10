@@ -107,4 +107,7 @@ chronological_headlines = pd.DataFrame(columns=['Date','Headlines'])
 for key, value in headline_dictionary:
 	chronological_headlines.append({'Date': key, 'Headlines': value},ignore_index=True)
 
+chronological_headlines_df = pd.Dataframe(chronological_headlines)
+all_data = all_mid_points_df.append(chronological_headlines_df)
+
 print('Loaded and sorted data')
